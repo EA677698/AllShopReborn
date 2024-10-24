@@ -10,7 +10,13 @@ public class ConfigManager {
     private FileConfiguration config;
 
     private int listingsLimit, expiration;
-    private boolean digitalEnabled, auctionsEnabled, physicalEnabled, serverShopEnabled, tradingEnabled, debug, realTimeUpdates;
+    private boolean digitalEnabled,
+            auctionsEnabled,
+            physicalEnabled,
+            serverShopEnabled,
+            tradingEnabled,
+            debug,
+            realTimeUpdates;
     private String serverPrefix;
 
     private ConfigManager() {
