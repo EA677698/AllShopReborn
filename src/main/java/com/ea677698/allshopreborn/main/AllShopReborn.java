@@ -1,6 +1,7 @@
 package com.ea677698.allshopreborn.main;
 
 import com.ea677698.allshopreborn.commands.*;
+import com.ea677698.allshopreborn.shops.Shop;
 import com.ea677698.allshopreborn.utils.ConfigManager;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;

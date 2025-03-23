@@ -5,12 +5,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class CommandAllShop implements CommandExecutor {
-
-    private final AllShopReborn plugin;
+public class CommandAllShop extends SharedCommand implements CommandExecutor {
 
     public CommandAllShop(AllShopReborn plugin) {
-        this.plugin = plugin;
+        super(plugin, null);
     }
 
     @Override
