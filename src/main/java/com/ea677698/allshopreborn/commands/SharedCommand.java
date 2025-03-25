@@ -2,6 +2,7 @@ package com.ea677698.allshopreborn.commands;
 
 import com.ea677698.allshopreborn.main.AllShopReborn;
 import com.ea677698.allshopreborn.shops.Shop;
+import org.bukkit.configuration.file.YamlConfiguration;
 
 public abstract class SharedCommand {
 

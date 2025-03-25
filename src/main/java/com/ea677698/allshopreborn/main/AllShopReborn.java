@@ -1,12 +1,13 @@
 package com.ea677698.allshopreborn.main;
 
 import com.ea677698.allshopreborn.commands.*;
-import com.ea677698.allshopreborn.shops.Shop;
 import com.ea677698.allshopreborn.utils.ConfigManager;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
 
 public final class AllShopReborn extends JavaPlugin {
 
@@ -16,17 +17,19 @@ public final class AllShopReborn extends JavaPlugin {
 
     private ConfigManager configManager;
 
-
     @Override
     public void onEnable() {
         if (!setupEconomy() ) {
-            getLogger().severe("Disabling due to no Vault dependency found!");
+            getLogger().severe("Disabling due to missing Vault dependency!");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
         configManager = ConfigManager.getInstance();
         configManager.setPlugin(this);
         configManager.loadConfig();
+
+        File data = new File("data.yml");
+
         this.getCommand("allShop").setExecutor(new CommandAllShop(this));
         this.getCommand("auction").setExecutor(new CommandAuction(this));
         this.getCommand("market").setExecutor(new CommandMarket(this));
